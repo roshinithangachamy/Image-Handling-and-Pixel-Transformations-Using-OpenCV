@@ -69,12 +69,10 @@ img=cv2.imread('Eagle.png')
 img_rgb = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 ```
 
-#### 6. Display the Colour image using matplotlib imshow() & Print the image width, height & channel.
-```python
-# YOUR CODE HERE
-```
 
-#### 7. Crop the image to extract any specific (Eagle alone) object from the image.
+
+
+#### 6. Crop the image to extract any specific (Eagle alone) object from the image.
 ```
 crop = img_rgb[0:450,200:550] 
 plt.imshow(crop[:,:,::-1])
@@ -84,12 +82,12 @@ plt.show()
 crop.shape
 ```
 
-#### 8. Resize the image up by a factor of 2x.
+#### 7. Resize the image up by a factor of 2x.
 ```
 res= cv2.resize(crop,(200*2, 200*2))
 ```
 
-#### 9. Flip the cropped/resized image horizontally.
+#### 8. Flip the cropped/resized image horizontally.
 ```
 flip= cv2.flip(res,1)
 plt.imshow(flip[:,:,::-1])
@@ -98,37 +96,39 @@ plt.axis("off")
 ```
 
 
-#### 10. Read in the image ('Apollo-11-launch.jpg').
-```python
+#### 9. Read in the image ('Apollo-11-launch.jpg').
+```
 img=cv2.imread('Apollo-11-launch.jpg',cv2.IMREAD_COLOR)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 img_rgb.shape
 ```
 
-#### 11. Add the following text to the dark area at the bottom of the image (centered on the image):
-```python
+#### 10. Add the following text to the dark area at the bottom of the image (centered on the image):
+```
 text = 'Apollo 11 Saturn V Launch, July 16, 1969'
 font_face = cv2.FONT_HERSHEY_PLAIN
-# YOUR CODE HERE: use putText()
+
 ```
 
-#### 12. Draw a magenta rectangle that encompasses the launch tower and the rocket.
-```python
+#### 11. Draw a magenta rectangle that encompasses the launch tower and the rocket.
+```
 rcol= (255, 0, 255)
 cv2.rectangle(img_rgb, (400, 100), (800, 650), rcol, 3)  
 ```
 
 #### 13. Display the final annotated image.
-```python
+```
 plt.title("Annotated image")
 plt.imshow(img_rgb)
 plt.show()
 ```
-```
+
 
 #### 14. Read the image ('Boy.jpg').
-```python
-# YOUR CODE HERE
+```
+import cv2
+import numpy as np
+import matplotlib.pyplot as plt
 ```
 
 #### 15. Adjust the brightness of the image.
@@ -207,7 +207,6 @@ plt.subplot(1,3,1); plt.imshow(h, cmap="hsv"); plt.title("Hue Channel"); plt.axi
 plt.subplot(1,3,2); plt.imshow(s, cmap="gray"); plt.title("Saturation Channel"); plt.axis("off")
 plt.subplot(1,3,3); plt.imshow(v, cmap="gray"); plt.title("Value Channel"); plt.axis("off")
 plt.show()
-
 ```
 #### 23. Merged the H, S, V, displays along with original image.
 ```
