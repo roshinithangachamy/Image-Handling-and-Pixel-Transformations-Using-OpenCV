@@ -218,7 +218,7 @@ plt.subplot(1,2,1); plt.imshow(boy_rgb); plt.title("Original RGB"); plt.axis("of
 plt.subplot(1,2,2); plt.imshow(merged_hsv_rgb); plt.title("Merged HSV→RGB"); plt.axis("off")
 plt.show()
 ```
-
+ 
 ## Output:
 <img width="385" height="516" alt="image" src="https://github.com/user-attachments/assets/da74c2f6-69d0-4eae-abb8-e2f9800d3b16" />
 <img width="380" height="502" alt="image" src="https://github.com/user-attachments/assets/c01bf3c4-31ab-4909-8940-cbc50ad95f73" />
